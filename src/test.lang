@@ -1,0 +1,2 @@
+var corrado = 10;
+print corrado;
