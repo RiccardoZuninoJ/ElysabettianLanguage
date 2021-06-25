@@ -16,6 +16,8 @@ class Parser(object):
                     identifier = self.tokens[i+1][1]
                     if self.tokens[i+3][0] == "STRING":
                         self.variables.append([identifier, self.tokens[i+3][1][1:-1]])
+                    elif self.tokens[i+3][0] == "IDENTIFIER":
+                        self.variables.append([identifier, self.print_variable(self.tokens[i+3][1])])
                     self.variables.append([identifier, self.tokens[i+3][1]])
                 else:
                     print("ERROR: Variable is not defined correctly")

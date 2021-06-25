@@ -1,4 +1,4 @@
 var enzo = 10;
-var corrado = 15;
+var corrado = enzo;
 print "Enzo"
 print corrado
