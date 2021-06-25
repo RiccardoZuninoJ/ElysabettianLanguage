@@ -24,7 +24,7 @@ def main():
             parser = parsing.Parser(tokens)
             parser.parse()
         else:
-            print("Error while opening source code.")
+            print("Error while opening source code")
     else:
         print("!!! You must specify a source code !!!")
 

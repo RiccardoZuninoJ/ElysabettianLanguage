@@ -1,4 +1,5 @@
 import re
+import shlex
 
 class Lexer(object):
 
@@ -10,7 +11,7 @@ class Lexer(object):
         tokens = []
 
         #Creates a word list
-        source_code = self.source_code.split()
+        source_code = shlex.split(self.source_code, posix=False)
 
         #Word index
         indexsource = 0
@@ -45,10 +46,10 @@ class Lexer(object):
 
             elif word == ";":
                 tokens.append(["LINE_ENDING", word])
+
             elif word[0] == "\"" and word[-1] == "\"":
                 tokens.append(["STRING", word])
             indexsource = indexsource + 1
-
 
 
         #Returns all the tokens

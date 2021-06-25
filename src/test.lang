@@ -1,4 +1,6 @@
-var enzo = 10;
-var corrado = enzo;
-print "Enzo"
+var enzo = 1
+var corrado = "Corrado a"
+print corrado
+var corrado = "Corrado b"
+print enzo
 print corrado
