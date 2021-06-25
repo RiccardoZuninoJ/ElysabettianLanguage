@@ -1,7 +1,7 @@
 # ElysabettianLanguage
 Un linguaggio di programmazione particolare, basato su Python.
 
-###Sintassi
+### Sintassi
 
 - Creazione di variabile
 
