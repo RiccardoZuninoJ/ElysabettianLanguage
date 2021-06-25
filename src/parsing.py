@@ -48,7 +48,10 @@ class Parser(object):
                 if self.tokens[i+1][0] == "STRING":
                     print(self.tokens[i+1][1][1:-1])
                 elif self.tokens[i+1][0] == "IDENTIFIER":
-                    print(self.print_variable(self.tokens[i+1][1]))
+                    if self.checkVariable(self.tokens[i+1][1]):
+                        print(self.print_variable(self.tokens[i+1][1]))
+                    else:
+                        print("WARNING! Print error - Variable " + self.tokens[i+1][1] + " does not exist!")
             i = i + 1
 
 
