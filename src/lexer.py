@@ -31,8 +31,6 @@ class Lexer(object):
 
             #If a word
             elif (re.match('[a-z]', word) or re.match('[A-Z]', word)) and word != "print":
-
-
                 tokens.append(["IDENTIFIER", word])
 
             #If a integer
@@ -47,7 +45,10 @@ class Lexer(object):
 
             elif word == ";":
                 tokens.append(["LINE_ENDING", word])
+            elif word[0] == "\"" and word[-1] == "\"":
+                tokens.append(["STRING", word])
             indexsource = indexsource + 1
+
 
 
         #Returns all the tokens
