@@ -5,7 +5,6 @@ class Parser(object):
         self.variables = []
 
     def parse(self):
-        print("Parsing data...")
         i = 0
         #print(self.tokens)
         for token in self.tokens:
@@ -44,6 +43,7 @@ class Parser(object):
                 else:
                     print("ERROR: Variable is not defined correctly")
 
+            #Printing Function
             elif token[0] == "PRINT":
                 if self.tokens[i+1][0] == "STRING":
                     print(self.tokens[i+1][1][1:-1])
@@ -52,6 +52,11 @@ class Parser(object):
                         print(self.print_variable(self.tokens[i+1][1]))
                     else:
                         print("WARNING! Print error - Variable " + self.tokens[i+1][1] + " does not exist!")
+
+            #Printing Variables Function
+            elif token[0] == "PRINT_VARIABLES":
+                print("=== Printing all the variables in a Dictionary ===")
+                print(self.variables)
             i = i + 1
 
 
@@ -65,10 +70,14 @@ class Parser(object):
             a = a + 1
 
     def changeVariable(self, identifier, newValue):
+        flag = 0
         for variable in self.variables:
             if identifier == variable[0]:
                 variable[1] = newValue
+                flag = 1
                 break
+        if flag == 0:
+            print("Variable " + identifier + " does not exist!")
 
     def checkVariable(self, identifier):
         for variable in self.variables:

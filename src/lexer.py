@@ -31,7 +31,7 @@ class Lexer(object):
                 tokens.append(["VAR_DECLARATION", word])
 
             #If a word
-            elif (re.match('[a-z]', word) or re.match('[A-Z]', word)) and word != "print":
+            elif (re.match('[a-z]', word) or re.match('[A-Z]', word)) and word != "print" and word != "printvariables()":
                 tokens.append(["IDENTIFIER", word])
 
             #If a integer
@@ -49,6 +49,9 @@ class Lexer(object):
 
             elif word[0] == "\"" and word[-1] == "\"":
                 tokens.append(["STRING", word])
+            elif word == "printvariables()":
+                tokens.append(["PRINT_VARIABLES", word])
+
             indexsource = indexsource + 1
 
 

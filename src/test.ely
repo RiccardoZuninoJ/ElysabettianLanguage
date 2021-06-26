@@ -1,0 +1,6 @@
+var corrado = 0
+print corrado
+var corrado = 10
+print corrado
+var corrado = 50
+print corrado
