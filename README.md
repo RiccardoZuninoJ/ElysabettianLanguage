@@ -11,6 +11,7 @@ Un linguaggio di programmazione particolare, basato su Python.
 - Apri il CMD, o riga di comando
 - Recati nella cartella src
 - Digita il comando `python main.py -s (source_code)` e inserisci al posto di (source code) il percorso relativo al codice scritto
+- - **Il source code può essere di qualsiasi formato di testo. Raccomandato per riconoscere i file l'utilizzo dell'estensione .ely**
 
 ### Sintassi
 **Dichiarazione di variabile**
