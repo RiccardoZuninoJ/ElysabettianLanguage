@@ -1,6 +1,9 @@
 # ElysabettianLanguage
 Un linguaggio di programmazione particolare, basato su Python.
 
+## Versione più avanzata
+Una versione più avanzata è in sviluppo
+
 ![Elysabettian](https://user-images.githubusercontent.com/86408279/123461546-82979300-d5e9-11eb-8493-d6844dd1b20f.png)
 
 ### Dependencies
